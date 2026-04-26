@@ -27,4 +27,5 @@ https://hub.docker.com/repository/docker/anoshdock/k8s-cicd-argocd
 ### Commands Used
 
 kubectl apply -f deployment.yaml
+
 kubectl apply -f service.yaml
