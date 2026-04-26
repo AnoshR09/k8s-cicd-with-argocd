@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment  
+metadata:
+  name: k8s-argocd-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: k8s-argocd
+  template:
+    metadata:
+      labels:
+        app: k8s-argocd
+    spec:
+      containers:
+      - name: k8s-argocd-container
+        image: anoshdock/k8s-cicd-argocd:v1.0.0
+        ports:
+        - containerPort: 5000
