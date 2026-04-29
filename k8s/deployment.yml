@@ -17,3 +17,17 @@ spec:
         image: anoshdock/k8s-cicd-argocd:v1.0.0
         ports:
         - containerPort: 5000
+
+        readinessProbe:
+          httpGet:
+            path: /health
+            port: 5000
+          initialDelaySeconds: 5
+          periodSeconds: 5
+
+        livenessProbe:
+          httpGet:
+            path: /health
+            port: 5000
+          initialDelaySeconds: 5
+          periodSeconds: 10

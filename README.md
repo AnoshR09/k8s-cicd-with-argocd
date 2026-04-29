@@ -28,3 +28,17 @@ https://hub.docker.com/repository/docker/anoshdock/k8s-cicd-argocd
 
 kubectl apply -f deployment.yaml
 kubectl apply -f service.yaml
+
+
+## 🚀 Day 4 – Kubernetes Advanced Concepts
+
+- Implemented readiness & liveness probes
+- Enabled zero-downtime deployments
+- Performed rolling updates
+- Tested rollback mechanism
+
+### Key Concepts
+
+- Self-healing systems
+- High availability
+- Zero downtime deployment
