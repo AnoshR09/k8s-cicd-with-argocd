@@ -18,7 +18,7 @@ docker run -d -p 5000:5000 --name devops-app k8s-cicd-argocd.
 Docker Image:
 https://hub.docker.com/repository/docker/anoshdock/k8s-cicd-argocd
 
-## 🚀 Day 3 – Kubernetes Deployment
+##  Day 3 – Kubernetes Deployment
 
 - Set up local Kubernetes using Minikube
 - Created Deployment with 2 replicas
@@ -27,6 +27,7 @@ https://hub.docker.com/repository/docker/anoshdock/k8s-cicd-argocd
 ### Commands Used
 
 kubectl apply -f deployment.yaml
+<<<<<<< HEAD
 kubectl apply -f service.yaml
 
 
@@ -42,3 +43,4 @@ kubectl apply -f service.yaml
 - Self-healing systems
 - High availability
 - Zero downtime deployment
+=======
