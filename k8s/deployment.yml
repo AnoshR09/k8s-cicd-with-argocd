@@ -14,7 +14,8 @@ spec:
     spec:
       containers:
       - name: k8s-argocd-container
-        image: anoshdock/k8s-cicd-argocd:v1.0.0
+        image: anoshdock/k8s-cicd-argocd:v1.1.1
+        imagePullPolicy: Always
         ports:
         - containerPort: 5000
 
