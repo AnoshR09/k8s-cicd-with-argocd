@@ -39,8 +39,9 @@ jobs:
 
     - name: Set image tag
       id: vars
-      run:
-        TAG=$(date +%Y%m%d%H%M%S)-${{GITHUB_SHA::8}}
+      run: |
+        SHORT_SHA=$(echo $GITHUB_SHA | cut -c1-8)
+        TAG=$(date +%Y%m%d%H%M%S)-$SHORT_SHA
         echo "IMAGE_TAG=$TAG" >> $GITHUB_ENV
 
     - name: Build Docker Image 
