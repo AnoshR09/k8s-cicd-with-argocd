@@ -44,3 +44,22 @@ kubectl apply -f service.yaml
 - High availability
 - Zero downtime deployment
 =======
+
+### ✅ Day 5 – CI Pipeline (GitHub Actions)
+
+#### 🔄 Workflow
+GitHub → Build → Tag → Push → DockerHub
+
+#### ⚙️ Features Implemented
+- Automated Docker image build on every push
+- Secure login using GitHub Secrets
+- Dynamic image tagging using:
+  - Timestamp
+  - Commit SHA
+- Multiple tagging strategy:
+  - `latest` → current version
+  - `<timestamp>-<sha>` → unique build version
+
+#### 🏷️ Example Tags
+    
+        20260501-a1b2c3d
