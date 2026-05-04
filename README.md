@@ -63,3 +63,14 @@ GitHub → Build → Tag → Push → DockerHub
 #### 🏷️ Example Tags
     
         20260501-a1b2c3d
+
+##  Day 6 – GitOps with ArgoCD
+
+- Installed ArgoCD in Kubernetes
+- Connected GitHub repo to ArgoCD
+- Enabled automatic sync
+- Achieved Git-driven deployments
+
+### Workflow
+
+Git Push → ArgoCD Sync → Kubernetes Update
