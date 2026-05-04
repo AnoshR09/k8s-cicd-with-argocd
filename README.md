@@ -73,4 +73,6 @@ GitHub → Build → Tag → Push → DockerHub
 
 ### Workflow
 
-Git Push → ArgoCD Sync → Kubernetes Update
+Git Push → ArgoCD Sync → Kubernetes Update.
+
+####
