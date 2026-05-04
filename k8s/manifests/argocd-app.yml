@@ -1,0 +1,23 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: k8s-argocd-app
+  namespace: argocd
+spec:
+  project: default
+
+
+  source:
+    repoURL: 'https://github.com/AnoshR09/k8s-cicd-with-argocd'
+    targetRevision: main
+    path: k8s-manifests
+
+
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: default
+
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
