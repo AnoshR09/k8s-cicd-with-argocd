@@ -12,6 +12,8 @@ This project demonstrates a complete DevOps workflow:
 
 ## 🏗️ Architecture
 
+<img width="1536" height="1024" alt="k8s-argocd" src="https://github.com/user-attachments/assets/b9e2ec82-e308-4b9b-a80c-6f5a7c7ae194" />
+
 
 ---
 
