@@ -1,78 +1,92 @@
-##  Day 1 – Dockerized Flask Application
+# 🚀 End-to-End CI/CD Pipeline with Kubernetes & GitOps
 
-###  What I Built
-- A simple Flask app running inside a Docker container
-- Exposed via port 5000
+## 📌 Overview
+This project demonstrates a complete DevOps workflow:
 
-### 🐳 Docker Steps
+- Continuous Integration using GitHub Actions
+- Containerization with Docker
+- Kubernetes deployment (Minikube)
+- GitOps-based Continuous Delivery using ArgoCD
 
-docker build -t devops-cicd-app .
-docker run -d -p 5000:5000 --name devops-app k8s-cicd-argocd.
+---
 
-##  Day 2 – DockerHub Integration
-
-- Tagged Docker image using versioning
-- Pushed image to DockerHub
-- Verified public accessibility
-
-Docker Image:
-https://hub.docker.com/repository/docker/anoshdock/k8s-cicd-argocd
-
-##  Day 3 – Kubernetes Deployment
-
-- Set up local Kubernetes using Minikube
-- Created Deployment with 2 replicas
-- Exposed application using NodePort service
-
-### Commands Used
-
-kubectl apply -f deployment.yaml
-<<<<<<< HEAD
-kubectl apply -f service.yaml
+## 🏗️ Architecture
 
 
-## 🚀 Day 4 – Kubernetes Advanced Concepts
+---
 
-- Implemented readiness & liveness probes
-- Enabled zero-downtime deployments
-- Performed rolling updates
-- Tested rollback mechanism
+## ⚙️ Tech Stack
 
-### Key Concepts
+- Docker
+- Kubernetes (Minikube)
+- GitHub Actions
+- ArgoCD
+- DockerHub
 
-- Self-healing systems
-- High availability
-- Zero downtime deployment
-=======
+---
 
-### ✅ Day 5 – CI Pipeline (GitHub Actions)
+## 🔄 Workflow
 
-#### 🔄 Workflow
-GitHub → Build → Tag → Push → DockerHub
+1. Developer pushes code to GitHub  
+2. CI pipeline builds Docker image  
+3. Image is tagged dynamically (SHA + timestamp)  
+4. Image is pushed to DockerHub  
+5. Kubernetes manifests stored in Git  
+6. ArgoCD monitors repo and syncs changes  
+7. Application is deployed automatically to Kubernetes  
 
-#### ⚙️ Features Implemented
-- Automated Docker image build on every push
-- Secure login using GitHub Secrets
-- Dynamic image tagging using:
-  - Timestamp
-  - Commit SHA
-- Multiple tagging strategy:
-  - `latest` → current version
-  - `<timestamp>-<sha>` → unique build version
+---
 
-#### 🏷️ Example Tags
-    
-        20260501-a1b2c3d
+## 🔑 Key Features
 
-##  Day 6 – GitOps with ArgoCD
+- Automated CI pipeline (build + push)
+- Dynamic image tagging for traceability
+- Kubernetes deployment with:
+  - Readiness & liveness probes
+  - Rolling updates
+  - Rollback capability
+- GitOps-based deployment using ArgoCD
+- Self-healing and auto-sync enabled
 
-- Installed ArgoCD in Kubernetes
-- Connected GitHub repo to ArgoCD
-- Enabled automatic sync
-- Achieved Git-driven deployments
+---
 
-### Workflow
+## 📸 Proof
 
-Git Push → ArgoCD Sync → Kubernetes Update.
+(Add screenshots here)
+- CI pipeline execution
+- DockerHub image tags
+- ArgoCD dashboard
+- Kubernetes pods
 
-#####
+---
+
+## 🚀 What This Project Demonstrates
+
+- End-to-end CI/CD pipeline design
+- Container lifecycle management
+- Kubernetes deployment strategies
+- GitOps principles and implementation
+- Automation and system reliability concepts
+
+---
+
+## ⚠️ Limitations (Honest & Professional)
+
+- Single environment setup (no dev/staging/prod separation)
+- No monitoring/observability
+- No Infrastructure as Code (Terraform)
+
+---
+
+## 🔮 Future Improvements
+
+- Multi-environment deployment (dev/stage/prod)
+- Infrastructure provisioning using Terraform
+- Observability (Prometheus + Grafana)
+- Advanced deployment strategies (blue/green, canary)
+
+---
+
+## 👤 Author
+
+GitHub: https://github.com/AnoshR09 
